@@ -1,42 +1,72 @@
-*
-{
-        padding: 0;
-	margin: 0;
-}
-body
-{
-	width: 100%;
-	height: 100%;
-}
-noscript
-{
-        background-image: url("https://http2.mlstatic.com/D_NQ_NP_844821-MLB46713492403_072021-O.webp");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h2
-{
-	font-size: 40px;
-}
-#hino_nacional
-{
-        float: left;
-	border-right: 2px solid black;
-	font-size: 20px;
-	width: 500px;
-	height: 100%;
-				
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
-
-#hino_bandeira
-{
-        width: 450px;
-        height: 100%;
-        font-size: 20px;
-	float: right;
+h2 {
+  font-size: 40px;
 }
 
-.texto
-{
-        margin-top: 25px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#hino_nacional,
+#hino_bandeira {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.responsive-canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .responsive-canvas {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  #hino_nacional,
+  #hino_bandeira {
+    flex-basis: calc(50% - 20px);
+    margin-right: 20px;
+  }
+
+  #hino_nacional {
+    order: 1;
+  }
+
+  #hino_bandeira {
+    order: 2;
+  }
 }
